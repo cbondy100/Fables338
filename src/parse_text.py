@@ -11,7 +11,7 @@ print(test.tags)
 
 kept_words = []
 for tuple in test.tags:
-    if tuple[1] == 'NN':
+    if 'NN' in tuple[1]:
         kept_words.append(tuple[0])
 
 print(kept_words)
