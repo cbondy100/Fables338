@@ -1,0 +1,72 @@
+List of parts of speech tags
+ADJ: adjective
+ADP: adposition (in, to, during)
+ADV: adverb (very, tomorrow)
+AUX: auxiliary (has *done* should *do*)
+CCONJ: coordinating conjunction (and, but, or)
+DET: determiner (a, an, the, this)
+INTJ: interjection
+NOUN: noun
+NUM: numeral
+PART: particle
+PRON: pronoun (I, you, he)
+PROPN: proper noun (Patrick)
+PUNCT: punctuation
+SCONJ: subordinating conjunction (while, if)
+SYM: symbol
+VERB: verb
+X: other
+
+Output Structure: For each word, you have the processors applied
+Example:
+{
+    id: location of word in sentence
+    text: actual word that was inputed
+    lemma: base form of above word
+    upos: universal part of speech
+    xpos: NOT NEEDED
+    feats: universal morphological features
+    head: head index of each word 
+    deprel: dependency relationship between words
+    start_char:
+    end_char:
+}
+
+The "depparse" processor builds a relationship tree
+Example:
+
+id: 1   word: A         head id: 2      head: buck      deprel: det
+id: 2   word: buck      head id: 8      head: concealed deprel: nsubj
+id: 3   word: ,         head id: 4      head: pursued   deprel: punct
+id: 4   word: pursued   head id: 2      head: buck      deprel: acl
+id: 5   word: by        head id: 6      head: hunters   deprel: case
+id: 6   word: hunters   head id: 4      head: pursued   deprel: obl
+id: 7   word: ,         head id: 2      head: buck      deprel: punct
+id: 8   word: concealed head id: 0      head: root      deprel: root
+id: 9   word: himself   head id: 8      head: concealed deprel: obj
+id: 10  word: among     head id: 12     head: branches  deprel: case
+id: 11  word: the       head id: 12     head: branches  deprel: det
+id: 12  word: branches  head id: 8      head: concealed deprel: obl
+id: 13  word: of        head id: 15     head: vine      deprel: case
+id: 14  word: a         head id: 15     head: vine      deprel: det
+id: 15  word: vine      head id: 12     head: branches  deprel: nmod
+
+"pos" processor output:
+word: A         upos: DET       xpos: DT        feats: Definite=Ind|PronType=Art
+word: buck      upos: NOUN      xpos: NN        feats: Number=Sing
+word: ,         upos: PUNCT     xpos: ,         feats: _
+word: pursued   upos: VERB      xpos: VBN       feats: Tense=Past|VerbForm=Part
+word: by        upos: ADP       xpos: IN        feats: _
+word: hunters   upos: NOUN      xpos: NNS       feats: Number=Plur
+word: ,         upos: PUNCT     xpos: ,         feats: _
+word: concealed upos: VERB      xpos: VBD       feats: Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin
+word: himself   upos: PRON      xpos: PRP       feats: Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes
+word: among     upos: ADP       xpos: IN        feats: _
+word: the       upos: DET       xpos: DT        feats: Definite=Def|PronType=Art
+word: branches  upos: NOUN      xpos: NNS       feats: Number=Plur
+word: of        upos: ADP       xpos: IN        feats: _
+word: a         upos: DET       xpos: DT        feats: Definite=Ind|PronType=Art
+word: vine      upos: NOUN      xpos: NN        feats: Number=Sing
+
+Desired Output: Buck hides from hunters in vine branches
+Other Option: Buck hides in vine branches
