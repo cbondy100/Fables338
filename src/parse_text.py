@@ -1,5 +1,6 @@
 #Parsing text API practice
-#test git push
+#test vs code git
+#Might have to use a differnt NLP API
 
 #importing TextBlob
 from textblob import TextBlob
