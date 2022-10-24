@@ -1,9 +1,16 @@
 #Testing the Stanford Stanza API
 import stanza
 
+"""
+Next Steps:
+    - before structural analysis, must replace pronouns with nouns
+    - read over dependency relations
+    - possible use of constituency relations to remove unnecessary clauses
+"""
+
 #stanza.download('en')
 nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse')
-doc = nlp("A buck, pursued by hunters, concealed himself among the branches of a vine")
+doc = nlp("One of the hunters, attracted by the rustling, turned round and guessing that their prey was there, shot into the bush and killed him. ")
 
 pos_exlude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
