@@ -10,7 +10,7 @@ Next Steps:
 
 #stanza.download('en')
 nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse')
-doc = nlp("One of the hunters, attracted by the rustling, turned round and guessing that their prey was there, shot into the bush and killed him. ")
+doc = nlp("A buck, pursued by hunters, concealed himself among the branches of a vine.")
 
 pos_exlude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
