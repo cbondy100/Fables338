@@ -10,7 +10,7 @@ Next Steps:
 
 #stanza.download('en')
 nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse')
-doc = nlp("One of the hunters, attracted by the rustling, turned round and guessing that their prey was there, shot into the bush and killed him.")
+doc = nlp("The hunters passed by without discovering him")
 
 pos_exlude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
@@ -31,3 +31,9 @@ for word in doc.sentences[0].words:
 
 print(' '.join(final_string_list))
 """
+
+#print tree
+for word in doc.sentences[0].words:
+    if word.head == 0:
+        print(word.text + " (" + word.deprel + ")")
+    
