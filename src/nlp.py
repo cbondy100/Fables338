@@ -10,14 +10,14 @@ from string import punctuation
 
 input_string = "A cat, grown feeble with age and no longer able to hunt mice as she once did, thought to herself how she might entice them within reach of her paw. Thinking that she might pass herself off for a bag or for a dead cat at least, she suspended herself by the hind legs from a peg, in the hope that the mice would no longer be afraid to come near her."
 
-download("en_core_web_lg")
+#download("en_core_web_lg")
 nlp = spacy.load("en_core_web_lg")
-neuralcoref.add_to_pipe(nlp)
-doc = nlp(input_string)
+#neuralcoref.add_to_pipe(nlp)
+#doc = nlp(input_string)
 
-print(doc._.coref_resolved)
+#print(doc._.coref_resolved)
 
-"""
+
 def pronoun_coref(text):
     doc = nlp(text)
     pronouns = [(tok, tok.i) for tok in doc if (tok.tag_ == "PRP")]
@@ -35,6 +35,6 @@ def pronoun_coref(text):
             doc[p[1]] = replace
     doc = ''.join(doc)
     return doc
-"""
+
 
 print(pronoun_coref(input_string))
