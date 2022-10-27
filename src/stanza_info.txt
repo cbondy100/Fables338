@@ -70,3 +70,64 @@ word: vine      upos: NOUN      xpos: NN        feats: Number=Sing
 
 Desired Output: Buck hides from hunters in vine branches
 Other Option: Buck hides in vine branches
+
+Inpt: The hunters passed by without discovering him
+id: 1   word: The           head id: 2      head: hunters       deprel: det
+id: 2   word: hunters       head id: 3      head: passed        deprel: nsubj
+id: 3   word: passed        head id: 0      head: root          deprel: root
+id: 4   word: by            head id: 3      head: passed        deprel: compound:prt
+id: 5   word: without       head id: 6      head: discovering   deprel: mark
+id: 6   word: discovering   head id: 3      head: passed        deprel: advcl
+id: 7   word: him           head id: 6      head: discovering   deprel: obj
+
+Input: when he thought that all was safe, he began browsing upon the leaves that had concealed him
+id: 1   word: when      head id: 3      head: thought   deprel: mark
+id: 2   word: he        head id: 3      head: thought   deprel: nsubj
+id: 3   word: thought   head id: 10     head: began     deprel: advcl
+id: 4   word: that      head id: 7      head: safe      deprel: mark
+id: 5   word: all       head id: 7      head: safe      deprel: nsubj
+id: 6   word: was       head id: 7      head: safe      deprel: cop
+id: 7   word: safe      head id: 3      head: thought   deprel: ccomp
+id: 8   word: ,         head id: 3      head: thought   deprel: punct
+id: 9   word: he        head id: 10     head: began     deprel: nsubj
+id: 10  word: began     head id: 0      head: root      deprel: root
+id: 11  word: browsing  head id: 10     head: began     deprel: xcomp
+id: 12  word: upon      head id: 14     head: leaves    deprel: case
+id: 13  word: the       head id: 14     head: leaves    deprel: det
+id: 14  word: leaves    head id: 11     head: browsing  deprel: obl
+id: 15  word: that      head id: 17     head: concealed deprel: nsubj
+id: 16  word: had       head id: 17     head: concealed deprel: aux
+id: 17  word: concealed head id: 14     head: leaves    deprel: acl:relcl
+id: 18  word: him       head id: 17     head: concealed deprel: obj
+id: 19  word: .         head id: 10     head: began     deprel: punct
+
+Input: One of the hunters, attracted by the rustling, turned round and guessing that their prey was there, shot into the bush and killed him. 
+
+id: 1   word: One       head id: 11     head: turned    deprel: nsubj
+id: 2   word: of        head id: 4      head: hunters   deprel: case
+id: 3   word: the       head id: 4      head: hunters   deprel: det
+id: 4   word: hunters   head id: 1      head: One       deprel: nmod
+id: 5   word: ,         head id: 6      head: attracted deprel: punct
+id: 6   word: attracted head id: 4      head: hunters   deprel: acl
+id: 7   word: by        head id: 9      head: rustling  deprel: case
+id: 8   word: the       head id: 9      head: rustling  deprel: det
+id: 9   word: rustling  head id: 6      head: attracted deprel: obl
+id: 10  word: ,         head id: 1      head: One       deprel: punct
+id: 11  word: turned    head id: 0      head: root      deprel: root
+id: 12  word: round     head id: 11     head: turned    deprel: advmod
+id: 13  word: and       head id: 14     head: guessing  deprel: cc
+id: 14  word: guessing  head id: 11     head: turned    deprel: conj
+id: 15  word: that      head id: 19     head: there     deprel: mark
+id: 16  word: their     head id: 17     head: prey      deprel: nmod:poss
+id: 17  word: prey      head id: 19     head: there     deprel: nsubj
+id: 18  word: was       head id: 19     head: there     deprel: cop
+id: 19  word: there     head id: 14     head: guessing  deprel: ccomp
+id: 20  word: ,         head id: 21     head: shot      deprel: punct
+id: 21  word: shot      head id: 19     head: there     deprel: conj
+id: 22  word: into      head id: 24     head: bush      deprel: case
+id: 23  word: the       head id: 24     head: bush      deprel: det
+id: 24  word: bush      head id: 21     head: shot      deprel: obl
+id: 25  word: and       head id: 26     head: killed    deprel: cc
+id: 26  word: killed    head id: 21     head: shot      deprel: conj
+id: 27  word: him       head id: 26     head: killed    deprel: obj
+id: 28  word: .         head id: 11     head: turned    deprel: punct
