@@ -5,8 +5,9 @@ pos_exlude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
 def imageGeneration(text):
     dalle = Dalle2("sess-q3JpYmKLzWgsiXdbQOAYZpKT5p7jtALHN8zy3DEI")
-    
-    file_paths = dalle.generate_and_download(text)
+    images = dalle.generate(text)
+    print(images)
+    file_paths = dalle.download(images)
     return file_paths
 
 def textProcessing(text):
