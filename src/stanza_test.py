@@ -57,4 +57,3 @@ for word in doc.sentences[0].words:
     if word.head == 0:
         root = newNode(word)
 
-for word in doc.sentences[0].words:
