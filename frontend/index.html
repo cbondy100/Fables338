@@ -2,27 +2,37 @@
 <html>
 <head>
     <title>Fables</title>
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>StoryPainter</h1>
-    <form action="/action_page.php">
-        <p><label for="w3review">Put In Your Story</label></p>
-        <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-
-    <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+    
+    <div class="container">
+        <div class="horizontal">
+            <p class="text">Put In Your Story Here!</p>
+            <textarea rows="10" cols="70"></textarea>
+            <br>
+            <input class = "submitbtn" type="submit" value="Submit">
+        </div>
+    
+        <div class="dropdown horizontal">
+            <button class="dropbtn">Comic Styles</button>
+            <div class="dropdown-content">
+                <a href="#">Realistic</a>
+                <a href="#">Abstract</a>
+                <a href="#">Black and White</a>
+            </div>
         </div>
     </div>
-      
-    <p>Click the "Submit" button and the form-data will be sent to a page on the server called "action_page.php".</p>
+    
+    
+    <p class="description">
+        StoryPainter is a web application where the user can put in the title and content of a 
+        short story to automatically generate a fitting comic. With this application, 
+        any user can turn a short story into a fully-fledged and visually compelling comic 
+        without going through the hardship of drawing it themselves.
+    </p>
+
     
 </body>
 </html>
