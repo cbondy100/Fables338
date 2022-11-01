@@ -1,7 +1,30 @@
+body {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 18px;
+}
+
+textarea {
+    font-size: 20px;
+}
+
+.submitbtn {
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
 .dropbtn {
     background-color: #04AA6D;
     color: white;
-    padding: 16px;
+    padding: 12px;
     font-size: 16px;
     border: none;
   }
@@ -9,6 +32,8 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    margin-top: 110px;
+    margin-left: 80px;
 }
 
 .dropdown-content {
@@ -32,3 +57,13 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.description {
+    margin-top: 50px;
+    width: 850px;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+}
