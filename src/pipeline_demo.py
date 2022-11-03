@@ -3,6 +3,8 @@ from dalle2 import Dalle2
 
 pos_exclude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
+#patrick is very smart
+
 # asdf
 
 def imageGeneration(text):
