@@ -1,5 +1,6 @@
 import stanza
 from dalle2 import Dalle2
+import os
 
 pos_exclude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
