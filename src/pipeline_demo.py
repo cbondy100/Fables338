@@ -17,7 +17,7 @@ def textProcessing(text):
 
     final_string_list = []
     for word in doc.sentences[0].words:
-        if word.upos not in pos_exlude:
+        if word.upos not in set(pos_exlude):
             final_string_list.append(word.text)
 
     return " ".join(final_string_list)
