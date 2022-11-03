@@ -1,9 +1,7 @@
 import stanza
 from dalle2 import Dalle2
 
-#patrick is fucking retarted sometimes
-
-pos_exlude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
+pos_exclude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
 def imageGeneration(text):
     dalle = Dalle2("sess-q3JpYmKLzWgsiXdbQOAYZpKT5p7jtALHN8zy3DEI")
@@ -17,12 +15,17 @@ def textProcessing(text):
     nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse')
     doc = nlp(text)
 
-    final_string_list = []
-    for word in doc.sentences[0].words:
-        if word.upos not in set(pos_exlude):
-            final_string_list.append(word.text)
+    final_strings = []
 
-    return " ".join(final_string_list)
+    for sentence in doc.sentences:
+        cur_string = []
+        for word in sentence.words:
+            if word.upos not in set(pos_exclude):
+                cur_string.append(word.text)
+        cur_string = ' '.join(cur_string)
+        final_strings.append(cur_string)
+
+    return final_strings
 
 def print_file_paths(file_paths):
     for path in file_paths:
@@ -35,8 +38,11 @@ if __name__ == '__main__':
     input_style = str(input())
 
     processed_text = textProcessing(input_string)
-    processed_text = processed_text + " " + input_style + " style"
-    print(processed_text)
-    file_paths = imageGeneration(processed_text)
+    parent_file_paths = []
+    for input in processed_text:
+        input = input + ' ' + input_style + ' style'
+        file_paths = imageGeneration(input)
+        parent_file_paths.append(file_paths)
+
     print("Your generated images are at these paths:\n")
     print_file_paths(file_paths)
