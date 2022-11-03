@@ -1,7 +1,7 @@
 import stanza
 from dalle2 import Dalle2
 
-#patrick is fucking retarted
+#patrick is fucking retarted sometimes
 
 pos_exlude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
