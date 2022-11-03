@@ -6,6 +6,8 @@ pos_exclude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
 #patrick is very smart
 
+# asdf
+
 def imageGeneration(text):
     dalle = Dalle2("sess-q3JpYmKLzWgsiXdbQOAYZpKT5p7jtALHN8zy3DEI")
     images = dalle.generate(text)
