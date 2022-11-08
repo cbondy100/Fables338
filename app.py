@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, render_template
 
 app = Flask(__name__, template_folder="templateFiles", static_folder="staticFiles")
 
@@ -8,8 +8,7 @@ def index():
 
 @app.route("/result")
 def result():
-    text = request.form.get("submit")
-    return text
+    
 
 if __name__ == '__main__':
     app.run()
