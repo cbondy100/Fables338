@@ -3,7 +3,7 @@
 class Scene:
     # pass in subjects, setting, and actions
     # output scene object
-    def __init__(self, subjets, setting, actions):
+    def __init__(self, subjects, setting, actions):
         pass
 
     # convert the verbs in this scene to predicate form
