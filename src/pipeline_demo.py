@@ -38,12 +38,7 @@ class imageGenerator:
             print(path + "\n")
 
     @classmethod
-    def main(cls):
-        print("Please input a one sentence scene of a story")
-        input_string = str(input())
-        print("What style would you link your art in? (comic, digital art, drawing)")
-        input_style = str(input())
-
+    def main(cls, input_string, input_style):
         processed_text = cls.textProcessing(input_string)
         parent_file_paths = []
         for input in processed_text:

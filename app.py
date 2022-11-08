@@ -9,7 +9,9 @@ def index():
 
 @app.route("/result")
 def result():
-    imageGenerator.main()
+    input_string = ''
+    input_style = ''
+    imageGenerator.main(input_string, input_style)
 
 if __name__ == '__main__':
     app.run()
