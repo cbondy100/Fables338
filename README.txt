@@ -4,6 +4,7 @@ Notes:
 
 Virtual Environment Directions:
 First make sure you have python3.6 or above installed on your device.
+Make sure you have virtualenv installed: pip install virtualenv
 Then, run python"your-python-version" -m venv "your-venv-name"
 For example: python3.9 -m venv fablesvenv
 Then, run $source "your-venv-name"/bin/activate
