@@ -24,7 +24,6 @@ def properNouns(doc):
         if word.upos == "PROPN":
             return word
         
-
 def getSubject(doc):
     for word in doc:
         if word.upos == "NOUN":
@@ -49,6 +48,6 @@ def textProcessing(text):
     return new_scene
 
 if __name__ == "__main__":
-    input_string = "There once was a small green ogre named Jefferey"
+    input_string = "There once was a small green ogre named Jefferey. Jefferey lived in a big wet swamp."
     processes_scene = textProcessing(input_string)
     print(processes_scene.propernoun)
