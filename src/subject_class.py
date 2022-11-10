@@ -38,16 +38,19 @@ def getAttributes(doc):
 
 def textProcessing(text):
     nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse')
+    scenes = []
     doc = nlp(text)
-    for word in doc.sentences[0].words:
-        if word.upos in set(pos_exclude):
-            doc.sentences[0].words.remove(word)
-    new_doc = doc.sentences[0].words
-   #print(new_doc)
-    new_scene = Scene(new_doc)
-    return new_scene
+    for sentence in doc.sentences:
+        for word in sentence.words:
+            if word.upos in set(pos_exclude):
+                sentence.words.remove(word)
+        new_doc = sentence.words
+        new_scene = Scene(new_doc)
+        scenes.append(new_scene)
+    return scenes
+
 
 if __name__ == "__main__":
     input_string = "There once was a small green ogre named Jefferey. Jefferey lived in a big wet swamp."
-    processes_scene = textProcessing(input_string)
-    print(processes_scene.propernoun)
+    processes_scenes = textProcessing(input_string)
+    print(processes_scenes[1].doc)
