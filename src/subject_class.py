@@ -11,18 +11,31 @@ pos_exclude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 # - pull our attributes (adjectives) store in list
 # - pull out action verbs?
 
-class Subject:
+class Scene:
     # initialize noun pairings, attributes
-    def __init__(self, nouns, attributes):
-        self.nouns = nouns
-        self.attributes = attributes
+    def __init__(self, doc):
+        self.doc = doc
+        self.subject = getSubject(doc)
+        self.propernoun = properNouns(doc)
+        self.attributes = getAttributes(doc)
 
-    def getSubject():
-        pass
+def properNouns(doc):
+    for word in doc:
+        if word.upos == "PROPN":
+            return word
+        
+
+def getSubject(doc):
+    for word in doc:
+        if word.upos == "NOUN":
+            return word
 
 def getAttributes(doc):
-    for word in doc.sentences[0].words:
-        pass
+    attributes = []
+    for word in doc:
+        if word.upos in ["ADJ"]:
+            attributes.append(word)
+    return attributes
 
 def textProcessing(text):
     nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse')
@@ -30,10 +43,12 @@ def textProcessing(text):
     for word in doc.sentences[0].words:
         if word.upos in set(pos_exclude):
             doc.sentences[0].words.remove(word)
-        if word.upos == "NOUN":
-            subject = Subject(word.lemma, )
     new_doc = doc.sentences[0].words
+   #print(new_doc)
+    new_scene = Scene(new_doc)
+    return new_scene
 
 if __name__ == "__main__":
-    input_string = "There once was a green ogre named Jefferey"
-    processed_text = textProcessing(input_string)
+    input_string = "There once was a small green ogre named Jefferey"
+    processes_scene = textProcessing(input_string)
+    print(processes_scene.propernoun)
