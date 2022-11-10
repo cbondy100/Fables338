@@ -4,6 +4,12 @@ import os
 
 pos_exclude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
+#Use a scene class instead
+# Steps:
+# - store whole sentence in doc in class
+# - pull out the noun and proper noun pairings
+# - pull our attributes (adjectives) store in list
+# - pull out action verbs?
 
 class Subject:
     # initialize noun pairings, attributes
