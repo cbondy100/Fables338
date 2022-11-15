@@ -1,5 +1,6 @@
-from flask import Flask, request, render_template
-#from pipeline_demo import imageGenerator
+from flask import Flask, render_template, request
+from src.pipeline_demo import imageGenerator
+import os
 
 app = Flask(__name__, template_folder="templateFiles", static_folder="staticFiles")
 
@@ -7,13 +8,14 @@ app = Flask(__name__, template_folder="templateFiles", static_folder="staticFile
 def index():
     return render_template('index.html')
 
-@app.route("/result", methods=['POST'])
+@app.route('/result', methods = ['POST', 'GET'])
 def result():
-    resultinput = request.form['storyinput']
-    input_string = ''
-    input_style = ''
-    #imageGenerator.main(input_string, input_style)
-    return render_template('result.html', result = resultinput)
+    if request.method == 'POST':
+        result = request.form
+        input_string = result['storyinput']
+        input_style = 'comic'
+        file_to_display = imageGenerator.main(input_string, input_style)
+        return render_template('result.html', result = file_to_display)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

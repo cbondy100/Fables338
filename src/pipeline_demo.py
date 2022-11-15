@@ -39,12 +39,16 @@ class imageGenerator:
 
     @classmethod
     def main(cls, input_string, input_style):
+        for file in os.listdir(os.getcwd()):
+            if file.endswith('.webp'):
+                os.remove(file)
         processed_text = cls.textProcessing(input_string)
         parent_file_paths = []
         for input in processed_text:
             input = input + ' ' + input_style + ' style'
             file_paths = cls.imageGeneration(input)
             parent_file_paths.append(file_paths)
+        return parent_file_paths[0]
 
-        print("Your generated images are at these paths:\n")
-        cls.print_file_paths(file_paths)
+if __name__ == '__main__':
+    print(imageGenerator.main('car', 'comic'))
