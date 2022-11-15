@@ -1,24 +1,34 @@
 body {
-    margin-top: 4%;
+    margin-top: 2%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
 }
 
 .text {
-    font-size: 18px;
-}
-
-textarea {
     font-size: 20px;
+    font-weight: bold;
 }
 
-.submitbtn {
-    width: 80px;
-    height: 30px;
-    margin-top: 10px;
-    font-size: 17px;
+.title_input {
+    width: 300px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.story_input {
+    width: 500px;
+    height: 300px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.submit {
+    font-size: 25px;
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .dropbtn {
@@ -59,9 +69,10 @@ textarea {
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 .description {
-    margin-top: 50px;
+    margin-top: 0px;
     width: 850px;
     font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .container {

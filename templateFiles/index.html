@@ -6,14 +6,19 @@
 </head>
 <body>
     <h1>StoryPainter</h1>
+    <p class="description">
+        StoryPainter is a web application where the user can put in the title and content of a 
+        short story and automatically received images corresponding to said story.
+    </p>
     
     <div class="container">
         <div class="horizontal">
-            <p class="text">What's The Title of Your Story?</p>
-            <textarea rows="1" cols="50"></textarea>
             <form action = "http://127.0.0.1:5000/result" method = "POST">
-                <p> Put In Your Story Here!<input type = "textarea" name = "storyinput"/></p>
-                <p><input type = "submit" value = "submit" /></p>
+                <p class="text">Story Title:</p>
+                <input class = "title_input" type="textarea" name = "titleinput"/>
+                <p class="text">Story Content:</p>
+                <textarea class = "story_input" name = "storyinput"></textarea>
+                <p><input class="submit" type = "submit" value = "Generate Story" /></p>
             </form>
         </div>
     
@@ -28,12 +33,7 @@
     </div>
     
     
-    <p class="description">
-        StoryPainter is a web application where the user can put in the title and content of a 
-        short story to automatically generate a fitting comic. With this application, 
-        any user can turn a short story into a fully-fledged and visually compelling comic 
-        without going through the hardship of drawing it themselves.
-    </p>
+    
 
     
 </body>
