@@ -1,18 +1,28 @@
 import stanza
 from dalle2 import Dalle2
 import os
+import requests
 
 class imageGenerator:
 
     pos_exclude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
-
+#sess-Y5PgcdYxRMvqfK8YMUvGVpZdGNTrNNVDi3UJfau5
+#sess-q3JpYmKLzWgsiXdbQOAYZpKT5p7jtALHN8zy3DEI
     @classmethod
     def imageGeneration(cls, text):
-        dalle = Dalle2("sess-q3JpYmKLzWgsiXdbQOAYZpKT5p7jtALHN8zy3DEI")
-        images = dalle.generate(text)
+        #dalle = Dalle2("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")
+        #images = dalle.generate(text)
+        text = text[0]
+        url = "https://api.openai.com/v1/images/generations"
+        headers = {"Content-Type": "application/json", "Authorization": "Bearer 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"}
+        data = {"prompt": text, "n": 4, "size": "1024x1024"}
+        images = requests.post(url, json = data, headers = headers)
         print(images)
-        file_paths = dalle.download(images)
-        return file_paths
+        returned = images.json()
+        print(returned)
+        output_url = returned['data'][0]['url']
+        #file_paths = dalle.download(images)
+        return output_url
 
     @classmethod
     def textProcessing(cls, text):
@@ -43,12 +53,7 @@ class imageGenerator:
             if file.endswith('.webp'):
                 os.remove(file)
         processed_text = cls.textProcessing(input_string)
-        parent_file_paths = []
-        for input in processed_text:
-            input = input + ' ' + input_style + ' style'
-            file_paths = cls.imageGeneration(input)
-            parent_file_paths.append(file_paths)
-        return parent_file_paths[0]
+        return cls.imageGeneration(processed_text)
 
 if __name__ == '__main__':
     print(imageGenerator.main('car', 'comic'))
