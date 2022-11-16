@@ -1,9 +1,34 @@
 <!doctype html>
 <html>
 <head>
-    <title>Fables</title>
+    <title>StoryPainter</title>
     <link rel="stylesheet" type="text/css" href="/staticFiles/styles.css">
 </head>
-<body>
-    <img src={{result}} />
+<body onload="testing()">
+    <script type="text/javascript">
+        
+        //var sentence_list = ["seven", "eight", "nine"];
+        //var str = "<p>";
+        //sentence_list.forEach(function(sentence) {
+        //    str += sentence;
+        //})
+        //str += "<\p>";
+        //var sentence_list = {{ s_list }}
+        function testing(){
+            //console.log("running javascript")
+            var data = JSON.parse('{{ data | tojson }}');
+            var scene_list = data.scene_list
+
+            var str = "<div>";
+            scene_list.forEach(function(scene){
+                str+="<img src= '" + scene[0] + "' class='images' alt='SOMETEXT' width='300'></img>";
+                str+="<p class='storytext'>" + scene[1] + "</p>";
+            })
+            str+= "</div>"
+            document.getElementById("sentenceContainer").innerHTML = str;            
+        }
+    </script>
+    <!-- <img src={{result}} /> -->
+    <h1 class = 'resulttitle'>{{data.title}}</h1>
+    <p id = "sentenceContainer"></p>
 </body>

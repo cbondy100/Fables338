@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Fables</title>
+    <title>StoryPainter</title>
     <link rel="stylesheet" type="text/css" href="/staticFiles/styles.css">
 </head>
 <body>
@@ -16,20 +16,24 @@
             <form action = "http://127.0.0.1:5000/result" method = "POST">
                 <p class="text">Story Title:</p>
                 <input class = "title_input" type="textarea" name = "titleinput"/>
+                
                 <p class="text">Story Content:</p>
                 <textarea class = "story_input" name = "storyinput"></textarea>
-                <p><input class="submit" type = "submit" value = "Generate Story" /></p>
+
+                <p class="styletext">Choose a Style:</p>
+                <div class="choice-container">
+                    <input type="radio" id="comic" name="style_chosen" value="Comic"/>
+                    <label class = "stylechoice" for="comic">Comic</label>
+                    <input type="radio" id="digiart" name="style_chosen" value="Digital Art"/>
+                    <label class = "stylechoice" for="digiart">Digital Art</label>
+                    <input type="radio" id="drawing" name="style_chosen" value="Drawing"/>
+                    <label class = "stylechoice" for="drawing">Drawing</label><br>
+                </div>
+
+                <button class="submit" type = "submit">Generate Story</button>
             </form>
         </div>
     
-        <div class="dropdown horizontal">
-            <button class="dropbtn">Comic Styles</button>
-            <div class="dropdown-content">
-                <a href="#">Realistic</a>
-                <a href="#">Abstract</a>
-                <a href="#">Black and White</a>
-            </div>
-        </div>
     </div>
     
     

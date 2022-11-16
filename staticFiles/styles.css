@@ -1,5 +1,6 @@
 body {
     margin-top: 2%;
+    margin-left: 4%;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -12,7 +13,7 @@ body {
 }
 
 .title_input {
-    width: 300px;
+    width: 500px;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -24,49 +25,27 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.styletext {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stylechoice {
+    font-size: 20px;
+}
+
+.choice-container {
+    margin-top: -15px;
+}
+
 .submit {
     font-size: 25px;
     background-color: black;
     color: white;
     font-family: 'Times New Roman', Times, serif;
+    padding: 2%;
+    margin-top: 4%;
 }
-
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px;
-    font-size: 16px;
-    border: none;
-  }
-  
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-top: 150px;
-    margin-left: 80px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 .description {
     margin-top: 0px;
@@ -76,5 +55,22 @@ body {
 }
 
 .container {
-    display: flex;
+    display:flex;
+}
+
+.resulttitle {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+.images {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.storytext {
+    text-align: center;
+    font-size: 20px;
 }
