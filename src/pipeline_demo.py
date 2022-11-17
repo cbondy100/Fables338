@@ -14,7 +14,7 @@ class imageGenerator:
         #images = dalle.generate(text)
         #text = text[0]
         url = "https://api.openai.com/v1/images/generations"
-        headers = {"Content-Type": "application/json", "Authorization": "input bearer key"}
+        headers = {"Content-Type": "application/json", "Authorization": "Bearer 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"}
         
         url_list = []
 
