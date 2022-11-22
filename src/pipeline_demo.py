@@ -19,7 +19,7 @@ class imageGenerator:
         url_list = []
 
         for scene in text:
-            data = {"prompt": scene + style, "n": 4, "size": "1024x1024"}
+            data = {"prompt": scene, "n": 4, "size": "1024x1024"}
             images = requests.post(url, json = data, headers = headers)
             print(images)
             returned = images.json()
@@ -62,4 +62,4 @@ class imageGenerator:
         return cls.imageGeneration(processed_text, input_style)
 
 if __name__ == '__main__':
-    print(imageGenerator.main('car', 'comic'))
+    print(imageGenerator.main('Using the following context: "the snake George is big and purple" Generate an image based on the following sentence: "George ate a mouse"', 'picture book'))
