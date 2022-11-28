@@ -51,6 +51,7 @@ class Scene:
 
             if word_deprel == 'nsubj':
                 if word_upos == 'PRON' and self.story_obj.last_noun_subject is not None:
+                    #keyError when pronoun is present
                     output_word = self.story_obj.noun_map[self.story_obj.last_noun_subject] + ' ' + self.story_obj.last_noun_subject
                 else:
                     self.story_obj.last_noun_subject = output_word
