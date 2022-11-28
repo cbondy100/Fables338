@@ -8,8 +8,6 @@ app = Flask(__name__, template_folder="templateFiles", static_folder="staticFile
 def index():
     return render_template('index.html')
 
-@app.route("/result")
-
 @app.route('/result', methods = ['POST', 'GET'])
 def result():
     if request.method == 'POST':
