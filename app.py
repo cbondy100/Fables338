@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from src.pipeline_demo import imageGenerator
+from src.story_class import Story
 import os
 
 app = Flask(__name__, template_folder="templateFiles", static_folder="staticFiles")
@@ -12,27 +12,21 @@ def index():
 def result():
     if request.method == 'POST':
         result = request.form
-        input_title = result['titleinput']
         input_string = result['storyinput']
-        input_style = result['style_chosen'] + " style"
+        input_title = result['titleinput']
+        input_style = result['style_chosen']
+        story_obj = Story(input_string, input_title, input_style)
 
-        sen_list = input_string.split(". ")
-        print(sen_list)
-
-        images_list = imageGenerator.main(input_string, input_style)
-        
-        
         scene_data = []
-        for index in range(len(sen_list)):
-            scene_data.append([images_list[index], sen_list[index]])
+        for scene in story_obj.scenes:
+            scene_data.append([scene.image, scene.raw_sentence])
 
         all_data={
             "title":input_title,
             "style": input_style,
-            "scene_list":scene_data
+            "scene_list": scene_data
             }
         
-        #file_to_display = imageGenerator.main(input_string, input_style)
         return render_template('result.html', data=all_data)
 
 if __name__ == '__main__':

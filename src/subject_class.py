@@ -2,6 +2,8 @@
 import stanza
 import os
 
+# not sure if we need any of this file still
+
 pos_exclude = ['ADV', 'DET', 'INTJ', 'PART', 'PUNCT', 'SYM', 'X']
 
 #Use a scene class instead
