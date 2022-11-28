@@ -34,11 +34,8 @@ body {
     font-size: 20px;
 }
 
-.choice-container {
-    margin-top: -15px;
-}
-
 .submit {
+    display: inline;
     font-size: 25px;
     background-color: black;
     color: white;
@@ -72,5 +69,36 @@ body {
 
 .storytext {
     text-align: center;
+    font-size: 50px;
+    font-family: "Tangerine", 'Times New Roman', Times, serif;
+}
+
+.dropdown {
+    margin-top: 20px;
+}
+
+.dropdown-content a {
+    color: black;
+    display: block;
+}
+
+.select {
+    height: 50px;
+    width: 150px;
     font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid black;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
 }

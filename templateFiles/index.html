@@ -5,6 +5,15 @@
     <link rel="stylesheet" type="text/css" href="/staticFiles/styles.css">
 </head>
 <body>
+    <script type="text/javascript">
+        function loading(){
+            var x = document.getElementById("allcontent");
+            x.style.display = 'none';
+            var y = document.getElementById("loaderid")
+            y.style.display='block';
+        }
+    </script>
+    <div id="allcontent">
     <h1>StoryPainter</h1>
     <p class="description">
         StoryPainter is a web application where the user can put in the title and content of a 
@@ -17,26 +26,32 @@
                 <p class="text">Story Title:</p>
                 <input class = "title_input" type="textarea" name = "titleinput"/>
                 
+                
                 <p class="text">Story Content:</p>
                 <textarea class = "story_input" name = "storyinput"></textarea>
 
-                <p class="styletext">Choose a Style:</p>
-                <div class="choice-container">
-                    <input type="radio" id="comic" name="style_chosen" value="Comic"/>
-                    <label class = "stylechoice" for="comic">Comic</label>
-                    <input type="radio" id="digiart" name="style_chosen" value="Digital Art"/>
-                    <label class = "stylechoice" for="digiart">Digital Art</label>
-                    <input type="radio" id="drawing" name="style_chosen" value="Drawing"/>
-                    <label class = "stylechoice" for="drawing">Drawing</label><br>
+                <div class = "dropdown">
+                    <label class="text">Choose a Style:</label>
+                    <div class="dropdown-content">
+                        <select id="selstyle" name="style_chosen" class="select">
+                            <option value="Comic">Comic</option>
+                            <option value="Digital Art">Digital Art</option>
+                            <option value="Drawing">Drawing</option>
+                            <option value="Monet">Monet</option>
+                            <option value="Cyber Punk">Cyber Punk</option>
+                        </select>
+                    </div>
                 </div>
-
-                <button class="submit" type = "submit">Generate Story</button>
+                <button class="submit" type = "submit" onclick="loading()">Generate Story</button>
             </form>
         </div>
     
     </div>
     
-    
+    </div>
+
+    <div id="loaderid" class="loader" style="display: none">
+    </div>
     
 
     

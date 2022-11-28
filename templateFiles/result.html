@@ -3,8 +3,12 @@
 <head>
     <title>StoryPainter</title>
     <link rel="stylesheet" type="text/css" href="/staticFiles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
 </head>
 <body onload="testing()">
+
     <script type="text/javascript">
         
         //var sentence_list = ["seven", "eight", "nine"];
@@ -14,12 +18,13 @@
         //})
         //str += "<\p>";
         //var sentence_list = {{ s_list }}
+
         function testing(){
             //console.log("running javascript")
             var data = JSON.parse('{{ data | tojson }}');
             var scene_list = data.scene_list
 
-            var str = "<div>";
+            var str = "<div style='width:300px' display='flex' justify-content='center'>";
             scene_list.forEach(function(scene){
                 str+="<img src= '" + scene[0] + "' class='images' alt='SOMETEXT' width='300'></img>";
                 str+="<p class='storytext'>" + scene[1] + "</p>";
