@@ -55,7 +55,7 @@ def dictTest(doc, noun_list):
             
     
 if __name__ == "__main__":
-    input_string = "A Fox one day spied a beautiful bunch of ripe grapes hanging from a vine trained along the branches of a tree."
+    input_string = "A Fox one day spied a beautiful he bunch of ripe grapes hanging from a vine trained along the branches of a tree."
     proc_doc = textProcessing(input_string)
 
     noun_list = []

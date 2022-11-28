@@ -62,4 +62,4 @@ class imageGenerator:
         return cls.imageGeneration(processed_text, input_style)
 
 if __name__ == '__main__':
-    print(imageGenerator.main('car', 'comic'))
+    print(imageGenerator.main('a blue car going really fast', 'monet'))
