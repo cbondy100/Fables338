@@ -62,8 +62,5 @@ class imageGenerator:
         return cls.imageGeneration(processed_text, input_style)
 
 if __name__ == '__main__':
-<<<<<<< HEAD
     print(imageGenerator.main('a blue car going really fast', 'monet'))
-=======
     print(imageGenerator.main('Using the following context: "the snake George is big and purple" Generate an image based on the following sentence: "George ate a mouse"', 'picture book'))
->>>>>>> 7e0ef74d12ffadfc1847519690ca357b56717d3a
