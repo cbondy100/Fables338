@@ -3,6 +3,9 @@
 <head>
     <title>StoryPainter</title>
     <link rel="stylesheet" type="text/css" href="/staticFiles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <script type="text/javascript">
@@ -13,41 +16,41 @@
             y.style.display='block';
         }
     </script>
-    <div id="allcontent">
-    <h1>StoryPainter</h1>
-    <p class="description">
-        StoryPainter is a web application where the user can put in the title and content of a 
-        short story and automatically received images corresponding to said story.
-    </p>
+    <div class="titlebox">
+        <h1 class="resulttitle">StoryPainter</h1>
+    </div>
+        
+        <div class="allcontent">
+        <p class="description">
+            StoryPainter is a web application where the user can put in the title and content of a 
+            short story and automatically received images corresponding to said story.
+        </p>
     
-    <div class="container">
-        <div class="horizontal">
-            <form action = "http://127.0.0.1:5000/result" method = "POST">
-                <p class="text">Story Title:</p>
-                <input class = "title_input" type="textarea" name = "titleinput"/>
+        <form action = "http://127.0.0.1:5000/result" method = "POST">
+            <p class="text">Story Title:</p>
+            <input class = "title_input" type="textarea" name = "titleinput"/>
                 
                 
-                <p class="text">Story Content:</p>
-                <textarea class = "story_input" name = "storyinput"></textarea>
-
-                <div class = "dropdown">
-                    <label class="text">Choose a Style:</label>
-                    <div class="dropdown-content">
-                        <select id="selstyle" name="style_chosen" class="select">
-                            <option value="Comic">Comic</option>
-                            <option value="Digital Art">Digital Art</option>
-                            <option value="Drawing">Drawing</option>
-                            <option value="Monet">Monet</option>
-                            <option value="Cyber Punk">Cyber Punk</option>
-                        </select>
+            <p class="text">Story Content:</p>
+            <textarea class = "story_input" name = "storyinput"></textarea>
+                <div class="bottom-layout">
+                    <div class = "dropdown">
+                        <label class="text">Choose a Style:</label>
+                        <div class="dropdown-content">
+                            <select id="selstyle" name="style_chosen" class="select">
+                                <option value="Comic">Comic</option>
+                                <option value="Digital Art">Digital Art</option>
+                                <option value="Drawing">Drawing</option>
+                                <option value="Monet">Monet</option>
+                                <option value="Cyber Punk">Cyber Punk</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="buttonbox">
+                    <button class="submit" type = "submit" onclick="loading()">Generate Story</button>
                     </div>
                 </div>
-                <button class="submit" type = "submit" onclick="loading()">Generate Story</button>
-            </form>
-        </div>
-    
-    </div>
-    
+        </form>        
     </div>
 
     <div id="loaderid" class="loader" style="display: none">

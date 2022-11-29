@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
 </head>
-<body onload="testing()">
+<body class='resultbody' onload="testing()">
 
     <script type="text/javascript">
         
@@ -24,7 +24,7 @@
             var data = JSON.parse('{{ data | tojson }}');
             var scene_list = data.scene_list
 
-            var str = "<div style='width:300px' display='flex' justify-content='center'>";
+            var str = "<div class='storydiv'>";
             scene_list.forEach(function(scene){
                 str+="<img src= '" + scene[0] + "' class='images' alt='SOMETEXT' width='300'></img>";
                 str+="<p class='storytext'>" + scene[1] + "</p>";
@@ -34,6 +34,9 @@
         }
     </script>
     <!-- <img src={{result}} /> -->
-    <h1 class = 'resulttitle'>{{data.title}}</h1>
+    <div class="titlebox">
+        <h1 class = 'resulttitle'>{{data.title}}</h1>
+    </div>
+    
     <p id = "sentenceContainer"></p>
 </body>

@@ -1,10 +1,22 @@
 body {
-    margin-top: 2%;
-    margin-left: 4%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F79%2F26%2FOR6dW5.jpg&f=1&nofb=1&ipt=35a9b9bde810f3bdee264b7ae49ba9cbafcd6ba8dd73b4c55c156e3bc8bb5505&ipo=images");
+}
+
+.allcontent {
+    width: 500px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcreativity103.com%2Fcollections%2FPaper%2Frough_paper.jpg&f=1&nofb=1&ipt=ca1e7f2653aeb8665e919f3be8f037cacae266aaa642d6bef12a41fa54ecf957&ipo=images");
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.description {
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .text {
@@ -25,56 +37,9 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.styletext {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.stylechoice {
-    font-size: 20px;
-}
-
-.submit {
-    display: inline;
-    font-size: 25px;
-    background-color: black;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 2%;
-    margin-top: 4%;
-}
-
-.description {
-    margin-top: 0px;
-    width: 850px;
-    font-size: 20px;
-    font-family: "Times New Roman", Times, serif;
-}
-
-.container {
-    display:flex;
-}
-
-.resulttitle {
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
-}
-
-.images {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.storytext {
-    text-align: center;
-    font-size: 50px;
-    font-family: "Tangerine", 'Times New Roman', Times, serif;
-}
-
 .dropdown {
     margin-top: 20px;
+    display: inline-block;
 }
 
 .dropdown-content a {
@@ -87,6 +52,25 @@ body {
     width: 150px;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.submit {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    background-color: rgb(114, 56, 12);
+    color: burlywood;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 2%;
+    margin-top: 4%;
+    display: inline-block;
+}
+
+.buttonbox {
+    width: 343px;
+    display: inline-block;
+    text-align: right;
 }
 
 .loader {
@@ -102,3 +86,53 @@ body {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
+
+
+
+.images {
+    width: 500px;
+    display: block;
+    margin: auto;
+    opacity: 0.85;
+}
+
+.storytext {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 15%;
+    opacity: 0.85;
+}
+
+.storydiv {
+    width: 500px;
+    margin:auto;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcreativity103.com%2Fcollections%2FPaper%2Frough_paper.jpg&f=1&nofb=1&ipt=ca1e7f2653aeb8665e919f3be8f037cacae266aaa642d6bef12a41fa54ecf957&ipo=images");
+    padding: 50px;
+}
+
+.titlebox {
+    background-image: url("/staticFiles/resources/images_Textures_book_14_book-3733315573.jpeg");
+    width: 600px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right: auto;
+    display: table;
+}
+
+.resulttitle {
+    text-align: center;
+    font-family: 'Tangerine', 'Times New Roman', Times, serif;
+    font-size: 70px;
+    margin:auto;
+    vertical-align: middle;
+    display: table-cell;
+    color: burlywood;
+    text-shadow:
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000,
+    3px 3px 0 #000;  
+}
+
