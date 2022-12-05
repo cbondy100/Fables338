@@ -1,1 +1,4 @@
 .DS_Store
+create_inter_training_data.py
+intermediate_data.json
+training_data.json

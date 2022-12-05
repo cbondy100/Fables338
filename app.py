@@ -25,6 +25,7 @@ def result():
 
         scene_data = []
         for scene in story_obj.scenes:
+            print(scene.image)
             scene_data.append([scene.image, scene.raw_sentence])
 
         all_data={
