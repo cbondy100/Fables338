@@ -20,23 +20,31 @@
         //var sentence_list = {{ s_list }}
 
         function testing(){
-            //console.log("running javascript")
+            console.log("running javascript");
             var data = JSON.parse('{{ data | tojson }}');
-            var scene_list = data.scene_list
-
-            var str = "<div class='storydiv'>";
-            scene_list.forEach(function(scene){
-                str+="<img src= '" + scene[0] + "' class='images' alt='SOMETEXT' width='300'></img>";
-                str+="<p class='storytext'>" + scene[1] + "</p>";
+            var images_list = data.images;
+            console.log(images_list);
+            var str = "<div class='imagesdiv'>";
+            images_list.forEach(function(image){
+                str+="<img src= '" + image + "' class='images' alt='SOMETEXT' width='300'></img>";
             })
             str+= "</div>"
-            document.getElementById("sentenceContainer").innerHTML = str;            
+            document.getElementById("sentenceContainer").innerHTML = str;  
+            
+            
         }
     </script>
     <!-- <img src={{result}} /> -->
     <div class="titlebox">
         <h1 class = 'resulttitle'>{{data.title}}</h1>
     </div>
+
+    <div class="resultstory">
+        <div class = "result-text">
+            <p>{{data.full_story}}</p>
+        </div>
+        
+        <p id = "sentenceContainer"></p>
+    </div>
     
-    <p id = "sentenceContainer"></p>
 </body>

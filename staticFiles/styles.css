@@ -82,12 +82,9 @@ body {
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
-
-}
-
-.loaderbox {
     margin: auto;
 }
+
 
 @keyframes spin{
     0% {transform: rotate(0deg);}
@@ -95,9 +92,10 @@ body {
 }
 
 .images {
-    width: 500px;
+    width: 400px;
     display: block;
     margin: auto;
+    padding: 10px;
     opacity: 0.85;
 }
 
@@ -109,11 +107,32 @@ body {
     opacity: 0.85;
 }
 
-.storydiv {
-    width: 500px;
-    margin:auto;
+.resultstory {
+    width: 1000px;
+    height: 500px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
     background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcreativity103.com%2Fcollections%2FPaper%2Frough_paper.jpg&f=1&nofb=1&ipt=ca1e7f2653aeb8665e919f3be8f037cacae266aaa642d6bef12a41fa54ecf957&ipo=images");
     padding: 50px;
+}
+
+.imagesdiv{
+    float:right;
+    width:500px;
+    height:500px;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.result-text{
+    float:left;
+    width: 500px;
+    word-wrap: break-word;
+    font-size: 35px;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
 .titlebox {
@@ -128,7 +147,7 @@ body {
 
 .resulttitle {
     text-align: center;
-    font-family: 'Tangerine', 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 70px;
     margin:auto;
     vertical-align: middle;

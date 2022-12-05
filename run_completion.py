@@ -1,5 +1,5 @@
 # check out this for more info
-# https://beta.openai.com/docs/guides/fine-tuning
+# https://beta.openai.com/pipdocs/guides/fine-tuning
 # particularly, there's a command on there that shows you how to set your api key in the command line so that this script works
 
 import os
@@ -19,7 +19,7 @@ class openai_engine:
         )
         output = response["choices"][0]["text"]
         output = output[22:].strip()
-        print(output)
+        #print(output)
         return output
 
     @classmethod
@@ -30,5 +30,5 @@ class openai_engine:
         size="1024x1024"
         )
         output = response['data'][0]['url']
-        print(output)
+        #print(output)
         return output
