@@ -10,11 +10,11 @@ class openai_engine:
     def run_completion(cls, api_key, input):
         openai.api_key = api_key
         response = openai.Completion.create(
-        model="davinci:ft-personal-2022-12-05-01-31-17",
+        model="davinci:ft-personal-2022-12-06-01-20-47",
         prompt=input,
         max_tokens=1000,
         temperature=0.9,
-        top_p=0.3,
+        #top_p=0.3,
         stop="THEEND"
         )
         output = response["choices"][0]["text"]

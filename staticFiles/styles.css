@@ -129,6 +129,7 @@ body {
 .result-text{
     float:left;
     width: 500px;
+    height: 500px;
     word-wrap: break-word;
     font-size: 35px;
     overflow-x:hidden;
@@ -148,7 +149,7 @@ body {
 .resulttitle {
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 70px;
+    font-size: 50px;
     margin:auto;
     vertical-align: middle;
     display: table-cell;

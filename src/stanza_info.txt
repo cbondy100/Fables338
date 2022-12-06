@@ -131,3 +131,9 @@ id: 25  word: and       head id: 26     head: killed    deprel: cc
 id: 26  word: killed    head id: 21     head: shot      deprel: conj
 id: 27  word: him       head id: 26     head: killed    deprel: obj
 id: 28  word: .         head id: 11     head: turned    deprel: punct
+
+
+
+
+
+davinci:ft-personal-2022-12-05-01-31-17

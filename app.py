@@ -29,9 +29,9 @@ def result():
 
         for sentence in gpt_output.split(". "):
             print(sentence)
-            #sentence = sentence + " " + input_style + " style"
-            #images.append(openai_engine.generate_image(api_key, sentence))
-            images.append("https://readtheforum.org/wp-content/uploads/2018/10/Screen-Shot-2018-10-01-at-7.17.51-PM.png")
+            sentence = sentence + " " + input_style + " style"
+            images.append(openai_engine.generate_image(api_key, sentence))
+            #images.append("https://readtheforum.org/wp-content/uploads/2018/10/Screen-Shot-2018-10-01-at-7.17.51-PM.png")
 
         #print(images)
         #story_obj = Story(input_string, input_title, input_style)
@@ -54,8 +54,6 @@ def result():
             "images": images
             }
         
-        print(all_data)
-
         return render_template('result.html', data=all_data)
 
 if __name__ == '__main__':
