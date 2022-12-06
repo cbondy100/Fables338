@@ -126,6 +126,10 @@ body {
     overflow-y:auto;
 }
 
+.imagesdiv::-webkit-scrollbar{
+    display: none;
+}
+
 .result-text{
     float:left;
     width: 500px;
@@ -134,6 +138,10 @@ body {
     font-size: 35px;
     overflow-x:hidden;
     overflow-y:auto;
+}
+
+.result-text::-webkit-scrollbar{
+    display: none;
 }
 
 .titlebox {

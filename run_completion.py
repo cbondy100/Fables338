@@ -10,7 +10,7 @@ class openai_engine:
     def run_completion(cls, api_key, input):
         openai.api_key = api_key
         response = openai.Completion.create(
-        model="davinci:ft-personal-2022-12-06-01-20-47",
+        model="davinci:ft-personal-2022-12-06-04-03-15",
         prompt=input,
         max_tokens=1000,
         temperature=0.9,

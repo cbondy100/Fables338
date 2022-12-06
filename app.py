@@ -23,7 +23,9 @@ def result():
         
         #have to handle quotations in the input string
         input_string = input_string.replace('"', '\\"')
-        print(input_string)
+        #print(input_string)
+
+        #encoded_string = input_string.encode(encoding="utf8")
 
         images = []
 
@@ -35,17 +37,6 @@ def result():
 
         #print(images)
         #story_obj = Story(input_string, input_title, input_style)
-
-        #use for html / css edits
-        #raw_sentences = input_string.split(". ")
-        #scene_data = []
-        #for s in raw_sentences:
-        #    scene_data.append(["https://readtheforum.org/wp-content/uploads/2018/10/Screen-Shot-2018-10-01-at-7.17.51-PM.png", s])
-
-        #scene_data = []
-        #for scene in story_obj.scenes:
-        #    print(scene.image)
-        #    scene_data.append([scene.image, scene.raw_sentence])
 
         all_data={
             "title": input_title,
