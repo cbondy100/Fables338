@@ -66,7 +66,7 @@ class Scene:
 
     def generateImage(self, text):
         url = "https://api.openai.com/v1/images/generations"
-        headers = {"Content-Type": "application/json", "Authorization": "Bearer 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"}
+        headers = {"Content-Type": "application/json", "Authorization": ""}
         data = {"prompt": text, "n": 4, "size": "1024x1024"}
         images = requests.post(url, json = data, headers = headers)
         returned = images.json()
